@@ -15,13 +15,9 @@ description: > # this means to ignore newlines until "baseurl:"
 # Build settings
 markdown: kramdown
 baseurl: "/groupsight-workshop"
-<<<<<<< HEAD
-url: "http://genp.github.io"
-=======
 url: "http://genp.github.io"
 sass:
   sass_dir: _sass
 include: ['_pages']
 kramdown:
   input: GFM
->>>>>>> master
