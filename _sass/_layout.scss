@@ -1,4 +1,27 @@
 /**
+ * Site banner
+ */
+.banner {
+  height: 40%;
+  width: 100%;
+  background-image: url("http://i.imgur.com/sx1eKfB.png");
+  background-size: cover;
+  background-position: bottom;
+  font-family: "Open Sans Condensed", Impact, sans-serif;
+  color: #f0f0ee;
+  font-size: 64px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+/**
  * Site header
  */
 .site-header {
