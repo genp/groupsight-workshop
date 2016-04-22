@@ -13,16 +13,18 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
+    height: 100%;
+    width: 100%;
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
 }
 
 
@@ -82,7 +84,12 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 24px;
 }
 
 
@@ -100,7 +107,6 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -133,6 +139,7 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    word-wrap: break-word;
 }
 
 code {
@@ -151,15 +158,45 @@ pre {
 }
 
 
+/**
+ * Tables
+ */
+tr:nth-child(even) {
+  background-color: #d2d1d1;
+}
+
+tr:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+
+tr:first-child {
+  background-color: $brand-color;
+}
+
+th {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f0f0ee;
+  padding: 20px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 20px;
+}
+
+
+
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    /* max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; */
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     @extend %clearfix;

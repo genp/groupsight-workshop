@@ -9,8 +9,9 @@
 title: GroupSight 
 subtitle: Workshop on Human Computation for Image and Video Analysis
 email: gen@cs.brown.edu 
+organization: GroupSight Workshop HCOMP 2016
 description: > # this means to ignore newlines until "baseurl:"
-  GroupSight 
+  GroupSight Workshop on Human Computation for Image and Video Analysis is a workshop at the Fourth AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2016) to be held October 30 - November 3, 2016 in Austin, TX, USA.
 
 # Build settings
 markdown: kramdown

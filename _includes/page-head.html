@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title }} | HCOMP 2016</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} </title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -15,20 +15,18 @@
 
   <script>
     // GLOBAL VARIABLES
-    var page_height;
-    var header;
+    var height;
 
     // DEFINING GLOBAL VARIABLES
     $( document ).ready(function() {
-      page_height = $('.intro').height();
-        header = page_height/3;
+      height = $('.banner').height() - 70;
     });
 
     // COLOR CHANGING NAV ON SCROLL FUNCTION
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
 
-        if (scrollTop > header) {
+        if (scrollTop > height) {
           $('.site-header').css({'background-color' : '#cccccc'});
         } else {
           $('.site-header').css({'background-color' : 'transparent'});
