@@ -9,4 +9,27 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <script>
+    // GLOBAL VARIABLES
+    var page_height;
+    var header;
+
+    // DEFINING GLOBAL VARIABLES
+    $( document ).ready(function() {
+      page_height = $('.intro').height();
+        header = page_height/3;
+    });
+
+    // COLOR CHANGING NAV ON SCROLL FUNCTION
+    $(window).on('scroll', function() {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > header) {
+          $('.site-header').css({'background-color' : '#a80710'});
+        } else {
+          $('.site-header').css({'background-color' : 'transparent'});
+        }
+    });
+  </script>
 </head>
