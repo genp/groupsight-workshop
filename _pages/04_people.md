@@ -4,5 +4,5 @@ title: People
 permalink: /people/
 ---
 
-Organizers 
-Program Committee
+* Organizers 
+* Program Committee
