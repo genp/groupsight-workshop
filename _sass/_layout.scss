@@ -2,14 +2,13 @@
  * Site intro
  */
 .intro {
-  height: 100%;
-  width: 100%;
   background-color: $banner-color;
-  background-image:  url(../img/home_banner.jpg) no-repeat center;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  color: $background-color;
-  text-transform: uppercase;
+  background:  url(../img/home_banner.jpg) no-repeat center;
+  background-position: top;
+  height: 350px;
+
+  color: #fff;//#B12C4E;
+
   text-align: center;
   display: flex;
   display: -webkit-flex;
@@ -22,10 +21,10 @@
 }
 
 .intro h1 {
-  font-size: 200px;
+  font-size: 100px;
   margin: 0;
   line-height: 200px;
-  font-family: "Open Sans Condensed", Impact, sans-serif;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .intro h3 {
@@ -51,17 +50,18 @@
  * Site banner
  */
 .banner {
-  height: 40%;
+  height: 70px;
   width: 100%;
-  background-color: $banner-color;
-  background-image: url(../img/home_banner.jpg) no-repeat center;
+  background: url(../img/home_banner.jpg) no-repeat center;
   background-size: cover;
-  background-position: bottom; 
+  background-position: top; 
 
-  font-family: "Open Sans Condensed", Impact, sans-serif;
+  
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;   
   color: $background-color;
   font-size: 64px;
-  text-transform: uppercase;
+
   text-align: center;
   display: flex;
   display: -webkit-flex;
@@ -84,8 +84,10 @@
     width: 100%;
     position: fixed;
     top: 0;
-    font-family: "Open Sans Condensed", Impact, sans-serif;
-    text-transform: uppercase;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    background:  url(../img/home_banner.jpg) no-repeat center;
+    background-position:top;
     -moz-transition-duration: 0.7s;
     -o-transition-duration: 0.7s;
     -webkit-transition-duration: 0.7s;
