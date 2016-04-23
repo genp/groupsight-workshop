@@ -25,6 +25,9 @@
   margin: 0;
   line-height: 200px;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    @include media-query($on-palm) {
+        font-size: 24px;
+    }
 }
 
 .intro h3 {
