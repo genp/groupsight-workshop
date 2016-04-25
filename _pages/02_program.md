@@ -4,6 +4,6 @@ title: Program
 permalink: /program/
 ---
 
-Invited Speakers
-Schedule
-Accepted Papers
+* Invited Speakers
+* Schedule
+* Accepted Papers

@@ -1,16 +1,14 @@
 /**
- * Site banner
+ * Site intro
  */
-.banner {
-  height: 40%;
-  width: 100%;
-  background-image: url("http://i.imgur.com/sx1eKfB.png");
-  background-size: cover;
-  background-position: bottom;
-  font-family: "Open Sans Condensed", Impact, sans-serif;
-  color: #f0f0ee;
-  font-size: 64px;
-  text-transform: uppercase;
+.intro {
+  background-color: $banner-color;
+  background:  url(../img/home_banner.jpg) no-repeat center;
+  background-position: top;
+  height: 350px;
+
+  color: $background-color;//#B12C4E;
+
   text-align: center;
   display: flex;
   display: -webkit-flex;
@@ -19,44 +17,118 @@
   -webkit-align-items: center;
   align-items: center;
   -webkit-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+}
+
+.intro h1 {
+  font-size: 100px;
+  margin: 0;
+  line-height: 200px;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    @include media-query($on-palm) {
+        font-size: 50px;
+        text-transform: upper;
+    }
+}
+
+.intro h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-top: 3px solid $background-color;
+  border-bottom: 3px solid $background-color;
+}
+
+.arrow {
+  font-size: 60px;
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  text-align: center;
+}
+
+
+
+
+/**
+ * Site banner
+ */
+.banner {
+  height: 70px;
+  width: 100%;
+  background: url(../img/home_banner.jpg) no-repeat center;
+  background-size: cover;
+  background-position: top; 
+
+  
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;   
+  color: $background-color;
+  font-size: 64px;
+
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+
+
 
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
+    background:  url(../img/home_banner.jpg) no-repeat center;
+    background-position:top;
+    -moz-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    transition-duration: 0.7s;
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
+    font-size: 24px;
+    line-height: 70px;
     margin-bottom: 0;
     float: left;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $background-color;
     }
+}
+
+.site-title:hover {
+  color: $text-color;
+}
+
+.site-nav .page-link:hover {
+    color: $text-color;
 }
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: 70px;
+    font-size: 24px;
 
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: $background-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -64,6 +136,7 @@
             margin-right: 20px;
         }
     }
+
 
     @include media-query($on-palm) {
         position: absolute;
@@ -106,6 +179,7 @@
         .page-link {
             display: block;
             padding: 5px 10px;
+            color: $text-color;
 
             &:not(:last-child) {
                 margin-right: 0;
@@ -117,12 +191,24 @@
 
 
 
+
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+  background-color: #888;
+  color: $background-color;
+  font-size: 13px;
+  padding: $spacing-unit 0;
+}
+
+.site-footer p {
+  text-align: center;
+  margin: 0;
+}
+
+.site-footer p a:hover {
+  color: $background-color;
 }
 
 .footer-heading {
