@@ -101,12 +101,8 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
     &:hover {
-        color: $text-color;
+        color: lighten($brand-color, 15%);
     }
 }
 
@@ -161,25 +157,8 @@ pre {
 /**
  * Tables
  */
-tr:nth-child(even) {
-  background-color: #d2d1d1;
-}
-
-tr:nth-child(odd) {
-  background-color: #e8e8e8;
-}
-
-tr:first-child {
-  background-color: $brand-color;
-}
-
-th {
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #f0f0ee;
-  padding: 20px;
-  text-align: left;
+tr{
+	padding: 5%;
 }
 
 td {
